@@ -1,0 +1,58 @@
+React App: It is the official way to wrap your react applications
+Vite: It is a tool compatible with many framworks to create React, Vue and other projects
+
+How to create a vite project:
+With NPM:
+In the folder we store the project
+-npm create vite@latest
+-We choose our framework
+-We choose what type of *script we want (typescript or js)
+-We can choose to use SWC with the project, which is a transpilator
+and we should always use it.
+-After this, we cd into the project folder
+-we install the dependencies with:
+    npm install
+-after that we run this command to visualizer the app
+    npm run dev 
+
+
+In the folder of the project
+-from the index.html, we can see that the entry point of the App
+is main.jsx
+-in main.jsx we are importing React as a DOM tree
+we import components
+
+-What is a component?
+-A COMPONENT IS A GROUP OF ELEMENTS.
+-AN ELEMENT IS WHAT REACT RENDERIZES
+A component is a function that creates an element, so we can use the code once and again
+
+-CSS
+In order to style our web applications, we need to give classes to the component elements
+    in order to prevent them from colliding with elements from other components
+    We use className and not class to avoid issues.
+    We can use different ways to name our classnames, sweet o vem, among others:
+    sweet style: prefix-nameElement-description
+
+Disable ESLINT
+-Delete eslint file
+-Erase eslint from dependencies
+-Disable it in the json
+ "scripts": {
+    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
+    "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test"
+  }
+
+
+About PROPS
+-Props are the variables that the components import into their functions
+-THEY SHOULD NEVER BE MODIFIED OR CHANGED UNLESS BY CREATING RENDERIZING
+    So, just create variables to work with the props and do not work on the props themselves
+-we can use default values by giving a value to the props
+-We can use the children of an element as a prop, but it will import all elements inside the children (children is the group of elements contained in the parent element)
+-We can pass objects as props example: const casey = {formatUserName:{formatUserName}, isFollowing:true, userName:"superCasey"}
+
+HOOKS
+-Hooks are tools that add more functionalities to react, making the components more flexible, responsive and adaptable to the changes we perform on them,
+    they also improve the performance of the components
